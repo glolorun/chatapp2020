@@ -11,7 +11,13 @@ const io = socketio(server);
 io.on('connection', (socket) => {
     console.log('Welcome!');
 
-    socket.on('join') 
+    socket.on('join', ({ name, room }, callback) => { 
+        console.log(name, room);
+        
+        const error = true;
+
+
+    }); 
     
     socket.on('disconnect', () => {
         console.log('User has left the chat')
